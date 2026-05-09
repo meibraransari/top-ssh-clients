@@ -8,21 +8,53 @@ This guide compares widely used SSH and remote-access tools across usability, co
 
 # 🧰 Tool Comparison Matrix
 
-| Tool                                 | Weapon Analogy            | Size / Complexity | Best For                    | Strengths                                          | Weaknesses            |
-| ------------------------------------ | ------------------------- | ----------------- | --------------------------- | -------------------------------------------------- | --------------------- |
-| OpenSSH                              | 🔫 Standard Assault Rifle | Medium            | Linux/macOS admins          | Reliable, secure, everywhere                       | CLI only              |
-| PuTTY                                | 🔸 Revolver               | Small             | Windows beginners           | Lightweight, simple                                | Old-school UI         |
-| Windows Terminal                     | 🪖 Modern Carbine         | Medium            | Developers on Windows       | Tabs, modern UI                                    | Needs OpenSSH backend |
-| KiTTY                                | 🤫 Silenced Pistol        | Small+            | Power users on Windows      | Automation, tabs                                   | Still PuTTY-like      |
-| Remmina                              | 🏹 Multi-tool Crossbow    | Medium            | Linux desktop users         | SSH + RDP + VNC                                    | Linux-centric         |
-| Bitvise SSH Client                   | 🔹 SMG                    | Medium            | File transfer + SSH         | Great GUI, SFTP                                    | Windows-focused       |
-| MobaXterm                            | 🎯 Tactical Rifle         | Medium-heavy      | Sysadmins/devops            | Tabs, X11, SFTP, tools built-in                    | Can feel bloated      |
-| Termius                              | 🎯 Smart Rifle with Scope | Medium            | Multi-device teams          | Sync, polished UI                                  | Some features paid    |
-| SecureCRT                            | 💣 Heavy Machine Gun      | Heavy             | Enterprise admins           | Powerful scripting, stable                         | Expensive             |
-| Xshell                               | 🛡️ Main Battle Tank      | Medium-heavy      | DevOps/professionals        | Fast, productive SSH workflow                      | Commercial licensing  |
-| Apache Guacamole                     | 🚢 Aircraft Carrier       | Massive           | Browser-based remote access | Centralized access                                 | Complex deployment    |
-| Royal TS                             | 🚀 Missile Launcher       | Heavy             | Managing many servers       | RDP + SSH + credential handling                    | Complex               |
-| Remote Desktop Manager (Devolutions) | ☢️ Nuclear Command Center | Very Heavy        | Enterprise IT teams/MSPs    | Massive protocol support, vaults, PAM integrations | Overwhelming at first |
+| Tool                   | Weapon Analogy             | Size / Complexity | Best For                         | Strengths                                   | Weaknesses            |
+| ---------------------- | -------------------------- | ----------------- | -------------------------------- | ------------------------------------------- | --------------------- |
+| OpenSSH                | 🔫 Standard Assault Rifle  | Medium            | Linux/macOS admins               | Reliable, secure, everywhere                | CLI only              |
+| PuTTY                  | 🔸 Revolver                | Small             | Windows beginners                | Lightweight, simple                         | Old-school UI         |
+| KiTTY                  | 🤫 Silenced Pistol         | Small+            | Power users on Windows           | Automation, tabs                            | PuTTY-based           |
+| SuperPuTTY             | 🧯 Modular Sidearm System  | Small+            | Legacy multi-session users       | Tabbed PuTTY management                     | Outdated ecosystem    |
+| Windows Terminal       | 🪖 Modern Carbine          | Medium            | Developers on Windows            | Tabs, modern UI                             | Needs OpenSSH backend |
+| mRemoteNG              | 🧭 Tactical Controller     | Medium            | Multi-protocol admins            | SSH/RDP/VNC unified UI                      | Aging UI              |
+| Tabby                  | 🧪 Next-gen Energy Rifle   | Medium            | Modern devs / OSS users          | Extensible, fast, modern                    | Maturing ecosystem    |
+| WindTerm               | 🌌 Quantum Precision Rifle | Medium            | Power users                      | High performance, built-in tools            | Smaller adoption      |
+| WinSCP                 | 📦 Supply Logistics Kit    | Small             | File transfer admins             | Best-in-class SFTP                          | Not a terminal        |
+| Bitvise SSH Client     | 🔧 Utility SMG             | Medium            | Enterprise file+SSH workflows    | Strong GUI, tunneling                       | Windows-only          |
+| Remmina                | 🏹 Multi-tool Crossbow     | Medium            | Linux desktop users              | SSH + RDP + VNC                             | Linux-centric         |
+| MobaXterm              | 🎯 Tactical Rifle          | Medium-heavy      | Sysadmins/devops                 | All-in-one toolkit                          | Can feel bloated      |
+| Termius                | 🎯 Smart Scoped Rifle      | Medium            | Multi-device teams               | Sync, mobile, polished UI                   | Paid features         |
+| Xshell                 | 🛡️ Main Battle Tank       | Medium-heavy      | DevOps professionals             | Fast, stable SSH workflows                  | Commercial licensing  |
+| SecureCRT              | 💣 Heavy Machine Gun       | Heavy             | Enterprise admins                | Scripting power, extreme stability          | Expensive             |
+| Royal TS               | 🚀 Missile Launcher        | Heavy             | Server & credential management   | SSH + RDP + vaults                          | Complex               |
+| Remote Desktop Manager | ☢️ Nuclear Command Center  | Very Heavy        | Enterprise IT / MSPs             | PAM, vaults, audit, scale                   | Overwhelming          |
+| Apache Guacamole       | 🚢 Aircraft Carrier        | Massive           | Browser-based remote access      | Clientless, centralized access              | Complex deployment    |
+| **Teleport**           | 🧬 Quantum Access Gate     | Very Heavy        | Zero-trust infrastructure access | Identity-based SSH, session recording, RBAC | Infra complexity      |
+
+
+
+# ⚖️ Key Structural Fix (Important)
+
+Now your ecosystem is properly split into **5 real layers instead of a flat list**:
+
+## 1. 🧱 Basic SSH Tools
+
+- PuTTY → KiTTY → SuperPuTTY → Windows Terminal  
+
+## 2. 🧪 Modern Open Source Terminals
+
+- Tabby / WindTerm  
+
+## 3. 🧭 Multi-protocol Desktop Managers
+
+- mRemoteNG / Remmina  
+
+## 4. 🎯 Power User / Enterprise SSH Tools
+
+- MobaXterm / Termius / Bitvise SSH Client / Xshell / SecureCRT  
+
+## 5. 🚀 Infrastructure & Enterprise Platforms
+
+- Royal TS → Remote Desktop Manager → Apache Guacamole → Teleport  
 
 
 
@@ -131,7 +163,9 @@ A full **enterprise governance platform** emphasizing security, auditing, compli
     ↓
 🤫 KiTTY
     ↓
-💻 Windows Terminal
+🖥️ Windows Terminal
+    ↓
+🧪 Tabby / 🔧 Bitvise SSH Client / 🌌 WindTerm
     ↓
 🎯 MobaXterm / 🛡️ Xshell / 💣 SecureCRT
     ↓
@@ -140,6 +174,8 @@ A full **enterprise governance platform** emphasizing security, auditing, compli
 ☢️ Remote Desktop Manager
     ↓
 🚢 Apache Guacamole
+    ↓
+🔐 Teleport (cloud-native SSH access layer)
 ```
 
 
