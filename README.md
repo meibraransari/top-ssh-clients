@@ -131,7 +131,7 @@ A full **enterprise governance platform** emphasizing security, auditing, compli
     ↓
 🤫 KiTTY
     ↓
-🪖 Windows Terminal
+💻 Windows Terminal
     ↓
 🎯 MobaXterm / 🛡️ Xshell
     ↓
