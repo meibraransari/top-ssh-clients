@@ -133,7 +133,7 @@ A full **enterprise governance platform** emphasizing security, auditing, compli
     ↓
 💻 Windows Terminal
     ↓
-🎯 MobaXterm / 🛡️ Xshell
+🎯 MobaXterm / 🛡️ Xshell / 💣 SecureCRT
     ↓
 🚀 Royal TS
     ↓
