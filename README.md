@@ -29,7 +29,7 @@ This guide compares widely used SSH and remote-access tools across usability, co
 | Remote Desktop Manager | ☢️ Nuclear Command Center  | Very Heavy        | Enterprise IT / MSPs             | PAM, vaults, audit, scale                   | Overwhelming          |
 | Apache Guacamole       | 🚢 Aircraft Carrier        | Massive           | Browser-based remote access      | Clientless, centralized access              | Complex deployment    |
 | **Teleport**           | 🧬 Quantum Access Gate     | Very Heavy        | Zero-trust infrastructure access | Identity-based SSH, session recording, RBAC | Infra complexity      |
-
+| **XPipe**              | 🧬 Portable Ops Console    | Medium-heavy      | Modern infrastructure operators  | Shell hub, SSH orchestration, container & VM integration | Young ecosystem       |
 
 
 # ⚖️ Key Structural (Important)
@@ -75,7 +75,31 @@ Focused on fast and efficient SSH administration with excellent session handling
 * Daily operational SSH work
 * Engineers who spend most of their time inside terminals
 
+## 🧬 XPipe Positioning
 
+### Modern infrastructure shell orchestration platform.
+
+XPipe sits between traditional SSH clients and enterprise infrastructure managers.
+It focuses on turning shells, containers, VMs, tunnels, and remote systems into a unified operational workspace.
+
+### ✅ Best suited for
+
+- DevOps engineers
+- Platform engineers
+- Kubernetes/container-heavy environments
+- Engineers managing many shell environments
+- Modern local + remote infrastructure workflows
+🚀 Key strengths
+- Unified shell management
+- SSH + Docker + Kubernetes integration
+- Portable workspace model
+- Cross-platform support
+- Modern UI/UX
+- Infrastructure-centric workflows
+⚠️ Tradeoffs
+- Younger ecosystem than legacy enterprise tools
+- Less enterprise governance than RDM/Teleport
+- Still evolving rapidly
 
 ## 🚀 Royal TS
 
@@ -133,6 +157,10 @@ Provides clientless remote access entirely through the browser.
 
 # 🔍 Important Distinction
 
+## 🧬 XPipe
+
+A modern infrastructure operations workspace focused on unifying shells, containers, SSH sessions, tunnels, and development infrastructure into one operational interface.
+
 ## 🚀 Royal TS
 
 A polished and efficient **administrator toolbox** focused on productivity and infrastructure organization.
@@ -155,6 +183,8 @@ A full **enterprise governance platform** emphasizing security, auditing, compli
 🧪 Tabby / 🔧 Bitvise SSH Client / 🌌 WindTerm
     ↓
 🎯 MobaXterm / 🛡️ Xshell / 💣 SecureCRT
+    ↓
+🧬 XPipe
     ↓
 🚀 Royal TS
     ↓
