@@ -5,6 +5,10 @@
 This guide compares widely used SSH and remote-access tools across usability, complexity, enterprise capability, and operational focus.
 
 
+## 🎬 Video Demonstration
+
+[![Watch on Youtube](https://i.ytimg.com/vi/fHHgIJW6yMI/maxresdefault.jpg)](https://youtu.be/fHHgIJW6yMI)
+
 
 # 🧰 Tool Comparison Matrix
 
